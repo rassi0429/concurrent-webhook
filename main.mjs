@@ -15,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 app.listen(process.env.PORT, () => console.log("Server started"))
 
-const config = process.env.CONFIG
+const config = JSON.parse(process.env.CONFIG)
 const webhooks = config.webhooks
 
 webhooks.forEach(webhook => {

@@ -16,5 +16,5 @@ helmのvaluesも同じ名前になっています。
 | CONCURRENT_HOST        |                                  |
 | CONCURRENT_SIG         |                                  |
 | CONFIG                 | config.json(sample.jsonをみてね) |
-| APP_TARGET_PORT                   | app listen port                  |
-| LB_LISTEN_PORT                   | app listen port                  |
+| APP_TARGET_PORT        | app listen port                  |
+| LB_LISTEN_PORT         | lb port                          |
