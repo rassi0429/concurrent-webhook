@@ -1,0 +1,26 @@
+{
+    "webhooks": [
+        {
+            "path": "/github",
+            "profileOverride": {
+                "username": "github bot",
+                "avatar": "https://pbs.twimg.com/profile_images/1683140958261751808/jgE_WI9a_400x400.jpg",
+                "description": "github bot",
+                "link": "https://twitter.com/ciel_vr"
+            },
+            "postStreams": ["hogehage@hogehoge.hage"],
+            "template": "hi im github <%= body.title %> :\n <%= body.text %>"
+        },
+        {
+            "path": "/discord",
+            "profileOverride": {
+                "username": "discord bot",
+                "avatar": "https://github.com/totegamma.png",
+                "description": "discord bot",
+                "link": "https://concurrent.world/entity/CCb72AAc9dcF088F7088b6718BE5a494fBB3861439"
+            },
+            "postStreams": ["hogehage@hogehoge.hage"],
+            "template": "hi im discord <%= body.name %> :\n <%= body.body %>"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "concurrent-webhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@concurrent-world/client": "^2.2.8",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rassi0429/concurrent-webhook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rassi0429/concurrent-webhook/issues"
+  },
+  "homepage": "https://github.com/rassi0429/concurrent-webhook#readme"
+}
