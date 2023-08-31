@@ -20,7 +20,7 @@ const webhooks = config.webhooks
 webhooks.forEach(webhook => {
     app.post(webhook.path, async (req, res) => {
         try {
-            const result = ejs.render(webhook.template, { body: req.body })
+            const result = ejs.render(webhook.template, { body: req.body, headers: req.headers })
             if (result.length == 0 || result.length > 4096) {
                 console.error("Invalid length")
                 res.status(200).send("OK")
