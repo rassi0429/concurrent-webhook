@@ -1,7 +1,6 @@
 import express from "express"
 import ejs from "ejs"
 import cors from "cors"
-import fs from "fs/promises"
 
 import { Client } from "@concurrent-world/client";
 
@@ -21,7 +20,12 @@ const webhooks = config.webhooks
 webhooks.forEach(webhook => {
     app.post(webhook.path, async (req, res) => {
         try {
-            const result = ejs.render(webhook.template, { body: req.body })
+            const result = ejs.render(webhook.template, { body: req.body, headers: req.headers })
+            if (result.length == 0 || result.length > 4096) {
+                console.error("Invalid length")
+                res.status(200).send("OK")
+                return
+            }
             await client.createCurrent(result, webhook.postStreams, {}, webhook.profileOverride);
             res.status(200).send("OK")
         } catch (error) {
